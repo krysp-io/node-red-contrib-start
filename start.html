@@ -134,8 +134,8 @@
         category: 'krysp',
         color:"#a6bbcf",
         defaults: {
-            name: {value:""},
-            props:{value:[{p:"payload"},{p:"topic",vt:"str"}], validate:function(v) {
+            name: {value:"start"},
+            props:{value:[{p:"payload",vt:"str",v: "Hello World!!!"}], validate:function(v) {
                     if (!v || v.length === 0) { return true }
                     for (var i=0;i<v.length;i++) {
                         if (/msg|flow|global/.test(v[i].vt)) {
@@ -173,7 +173,8 @@
             var props = this.props;
             if (!Array.isArray(props)) {
                 props = [
-                    { p:"payload", v: "Hello World", vt: 'str' },
+                    { p:"payload", v: this.payload, vt: this.payloadType },
+                    { p:"topic", v: this.topic, vt: "str" }
                 ]
             }
             if (props) {
