@@ -69,6 +69,7 @@
             height -= $(rows[i]).outerHeight(true);
         }
         var editorRow = $("#dialog-form>div.node-input-property-container-row");
+        editorRow.css("height", "2450px");
         height -= (parseInt(editorRow.css("marginTop"))+parseInt(editorRow.css("marginBottom")));
         height += 16;
         $("#node-input-property-container").editableList('height',height);
@@ -115,7 +116,7 @@
             data: JSON.stringify(customMsg||{}),
             contentType: "application/json; charset=utf-8",
             success: function (resp) {
-                RED.notify(node._("inject.success", { label: label }), { type: "success", id: "inject", timeout: 2000 });
+                RED.notify(node._("Successfully injected:inject", { label: label }), { type: "success", id: "inject", timeout: 2000 });
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 if (jqXHR.status == 404) {
