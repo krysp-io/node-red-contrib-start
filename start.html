@@ -17,7 +17,7 @@
 <script type="text/html" data-template-name="start">
     <div class="form-row">
         <label for="node-input-name"><i class="fa fa-tag"></i> <span>Name</span></label>
-        <input type="text" id="node-input-name" placeholder="Name">
+        <input type="text" id="node-input-name" placeholder="Name" value="start">
     </div>
 
     <div class="form-row node-input-property-container-row">
@@ -173,8 +173,7 @@
             var props = this.props;
             if (!Array.isArray(props)) {
                 props = [
-                    { p:"payload", v: this.payload, vt: this.payloadType },
-                    { p:"topic", v: this.topic, vt: "str" }
+                    { p:"payload", v: "Hello World", vt: 'str' },
                 ]
             }
             if (props) {

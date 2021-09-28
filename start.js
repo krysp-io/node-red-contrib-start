@@ -27,6 +27,11 @@
             n.props.push({
                 p:'payload',
                 v:n.payload,
+                vt:n.payloadType
+            });
+            n.props.push({
+                p:'topic',
+                v:n.topic,
                 vt:'str'
             });
         } else {
