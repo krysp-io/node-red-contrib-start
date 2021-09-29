@@ -71,7 +71,8 @@
         var editorRow = $("#dialog-form>div.node-input-property-container-row");
         height -= (parseInt(editorRow.css("marginTop"))+parseInt(editorRow.css("marginBottom")));
         height += 16;
-        $("#node-input-property-container").editableList('height', "450px");
+
+        $("#node-input-property-container").editableList('height', height);
     }
     /** Retrieve editableList items (refactored for re-use in the form inject button)*/
     function getProps(el, legacy) {
