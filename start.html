@@ -71,6 +71,7 @@
         margin-top: 40px !important;
         margin-left: auto !important;
         margin-right: auto !important;
+        border-radius: 5px !important;
     }
 </style>
 
@@ -153,7 +154,7 @@
         color:"#a6bbcf",
         defaults: {
             name: {value:"start"},
-            props:{value:[{p:"payload",vt:"str",v: "Hello World!!!"}], validate:function(v) {
+            props:{value:[{p:"payload",vt:"str",v: "Hello World"}], validate:function(v) {
                     if (!v || v.length === 0) { return true }
                     for (var i=0;i<v.length;i++) {
                         if (/msg|flow|global/.test(v[i].vt)) {
@@ -177,7 +178,7 @@
             payload: {value:"", validate: RED.validators.typedInput("payloadType")},
             payloadType: {value:"str"},
         },
-        icon: "inject.svg",
+        icon: "fa arrow-right",
         inputs:0,
         outputs:1,
         outputLabels: function(index) {
@@ -668,10 +669,11 @@
     </dl>
     <h3>Details</h3>
     <p>The start node can initiate a flow with a specific payload value.
-    The default payload is a string of value "Hello World!!!"</p>
+    The default payload is a string of value "Hello World"</p>
     <p>The node also supports injecting strings, numbers, booleans, JavaScript objects, or flow/global context values.</p>
     <p>By default, the node is triggered manually by clicking on its button within the editor.</p>
     
+    <p>To test the new injected message in a flow, use <b>Test Without Deploy</b>option.</p>
     <p><b>Note</b>: To include a newline in a string you must use a Function node to create the payload.</p>
 </script>
     
