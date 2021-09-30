@@ -133,7 +133,7 @@
             data: JSON.stringify(customMsg||{}),
             contentType: "application/json; charset=utf-8",
             success: function (resp) {
-            RED.notify(node._("inject.success", { label: label }), { type: "success", id: "inject", timeout: 2000 });
+            RED.notify(node._("Successfully injected:start", { label: label }), { type: "success", id: "inject", timeout: 2000 });
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 if (jqXHR.status == 404) {
