@@ -640,3 +640,38 @@
     });
 })();
 </script>
+
+
+<!--
+  Copyright JS Foundation and other contributors, http://js.foundation
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<script type="text/html" data-help-name="start">
+    <p>Injects a message into a flow manually. The message
+    payload can be a variety of types, including strings, JavaScript objects or the current time.</p>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload<span class="property-type">various</span></dt>
+        <dd>The configured payload of the message.</dd>
+    </dl>
+    <h3>Details</h3>
+    <p>The start node can initiate a flow with a specific payload value.
+    The default payload is a string of value "Hello World!!!"</p>
+    <p>The node also supports injecting strings, numbers, booleans, JavaScript objects, or flow/global context values.</p>
+    <p>By default, the node is triggered manually by clicking on its button within the editor.</p>
+    
+    <p><b>Note</b>: To include a newline in a string you must use a Function node to create the payload.</p>
+</script>
+    
