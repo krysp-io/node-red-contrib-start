@@ -57,20 +57,9 @@
         width: 40px !important;
     }
     .custom-button {
-        font-size: 14px;
+        font-size: 14px !important;
         height: 45px !important;
-        display: inline-block;
-        font-weight: 400 !important;
-        line-height: 1.5 !important;
-        text-align: center;
-        text-decoration: none;
-        vertical-align: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-        padding: .375rem .75rem !important;
-        font-size: 1rem !important;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        padding: .5rem 1.5rem !important;
     }
     .test-start-button {
         height: 45px !important;
@@ -144,7 +133,7 @@
             data: JSON.stringify(customMsg||{}),
             contentType: "application/json; charset=utf-8",
             success: function (resp) {
-                RED.notify(node._("Successfully injected:inject", { label: label }), { type: "success", id: "inject", timeout: 2000 });
+            RED.notify(node._("inject.success", { label: label }), { type: "success", id: "inject", timeout: 2000 });
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 if (jqXHR.status == 404) {
@@ -186,7 +175,7 @@
             onceDelay: {value:0.1},
             topic: {value:""},
             payload: {value:"", validate: RED.validators.typedInput("payloadType")},
-            payloadType: {value:"date"},
+            payloadType: {value:"str"},
         },
         icon: "inject.svg",
         inputs:0,
@@ -493,6 +482,8 @@
             $('#node-inject-test-inject-button').css("margin-right", "unset");
             $('#node-inject-test-inject-button').css("color", "#fff !important");
             $('#node-inject-test-inject-button').addClass("test-start-button");
+            $('#node-inject-test-inject-button').removeClass("red-ui-button");
+            $("#node-inject-test-inject-button > i").css("padding-right", "10px")
             $("#node-inject-test-inject-button").siblings(".red-ui-button-small").after("<hr>")
             $("#node-inject-test-inject-button").siblings(".red-ui-button-small").addClass("custom-button");
 
