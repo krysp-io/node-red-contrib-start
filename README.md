@@ -17,9 +17,6 @@ To install the stable version use the Menu - Manage palette option and search fo
 
 Or else install the package directly from Manage Palette
 
-
-<img src='https://static.node.iopulsedev.net/ManagePalette.png' alt='manage palette'>
-
 Restart your Node-RED instance and you should have a "start" node available in the palette.
 
 # Get Started
@@ -29,6 +26,9 @@ Restart your Node-RED instance and you should have a "start" node available in t
 <p>1. After installation, drag the <b>start</b> node from the palette to the workspace.</p>
 <p>2. Double click on the node to add msg.payload.</p>
 <p>3. Test the flow by clicking on "Test Without Deploy".</p>
+
+
+<img src='https://static.node.krysp.io/templates/images/testWithoutDebug.png' alt='test without deploy'>
 
 # Usage
 -------
